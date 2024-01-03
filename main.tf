@@ -7,7 +7,7 @@ resource "random_string" "rand" {
 }
 
 locals {
-  namespace = substr(join("-", [var.var.namespace, randomrandom_string.rand.result]), 0, 24)
+  namespace = substr(join("-", [var.var.namespace, random_string.rand.result]), 0, 24)
 }
 
 resource "aws_resourcegroups_group" "resource_group" {
