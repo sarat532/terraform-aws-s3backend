@@ -15,10 +15,10 @@ resource "aws_resourcegroups_group" "resource_group" {
   resource_query {
     query = <<-JSON
     {
-        "ResourceTypeFilters: [ "AWS::AllSupported" ],
-        "TagFilters: [
+        "ResourceTypeFilters": [ "AWS::AllSupported" ],
+        "TagFilters": [
             {
-                "Key": "ResourceGroup,
+                "Key": "ResourceGroup",
                 "Values": ["${local.namespace}"]
             }
         ]
