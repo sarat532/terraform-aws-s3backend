@@ -50,7 +50,7 @@ resource "aws_iam_policy" "iam_policy" {
 }
 
 resource "aws_iam_policy_attachment" "policy_attach" {
-  roles = [ aws_iam_role.iam_role.arn ]
+  roles = [ aws_iam_role.iam_role.name ]
   policy_arn = aws_iam_policy.iam_policy.arn
   name = "${local.namespace}-tf-policy-attach"
 }
